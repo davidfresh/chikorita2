@@ -1,42 +1,39 @@
 /*
  Theme Name:   Tema ASE
  Theme URI:    http://ase.una.mx
- Description:  Twenty Fourteen Child Theme
- Author:       John Doe
+ Description:  Un tema adaptado para ASE UNAM
+ Author:        TIDI
  Author URI:   http://example.com
  Template:     zerif-lite
  Version:      0.1
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
- Text Domain:  twenty-fourteen-chil
+ Text Domain:  ASE Tema
 */
 @import url("../zerif-lite/style.css");
 
 /* =Aquí empieza la personalización de tu tema
 -------------------------------------------------------------- */
-.testimonial{
-	background: olive;
-}
+
+/* Estilos galeria front page */
 
 
 
-
-
-
-.slider {
+.galerias {
   height: 50%;
-  margin: 0 auto;
+  margin: 0 2em;
   max-width: 500px;
   padding: 0;
   position: relative;
   text-align: center;
+  
 }
 
-.slider-inner {
+.galerias-inner {
   margin-bottom: 20px;
   overflow: hidden;
 }
 
-.slides {
+.imagenes {
   align-items: center;
   display: -webkit-box;
   display: -moz-box;
@@ -58,15 +55,15 @@
   transition: all 0.8s ease;
 }
 
-.slide {
+.galeria {
   width: 25%;
 }
 
-.slider-control {
+.galerias-control {
   display: none;
 }
 
-.slider-control-label {
+.galerias-control-label {
   background-color: #CCC;
   border: 2px solid #000;
   border-radius: 100%;
@@ -76,45 +73,43 @@
   width: 12px;
 }
 
-.slider-control-label:hover,
-.slider-control-label:focus {
+.galerias-control-label:hover,
+.galerias-control-label:focus {
   background-color: #FFF;
 }
 
-.slide-back,
-.slide-next {
-  background-color: #CCC;
-  border-radius: 100%;
-  border: 2px solid #000;
+.galeria-back,
+.galeria-next {
+  border-radius: 100%; 
   color: #CCC;
   cursor: pointer;
   display: none;
   font-weight: bold;
-  height: 26px;
+  height: 25px;
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 40%;
   vertical-align: middle;
-  width: 26px;
+  width: 30px;
 }
 
-.slide-back:hover,
-.slide-back:focus,
-.slide-next:hover,
-.slide-next:focus {
+.galeria-back:hover,
+.galeria-back:focus,
+.galeria-next:hover,
+.galeria-next:focus {
   background-color: #FFF;
 }
 
-.slide-back {
+.galeria-back {
   left: -50px;
 }
 
-.slide-next {
+.galeria-next {
   right: -50px;
 }
 
-.slider-arrow::before,
-.slider-arrow::after {
+.galerias-arrow::before,
+.galerias-arrow::after {
   border: 2px solid black;
   border-radius: 9px;
   content: '';
@@ -123,7 +118,7 @@
   width: 9px;
 }
 
-.slide-back::before {
+.galeria-back::before {
   left: 5px;
   top: 8px;
 
@@ -134,7 +129,7 @@
   transform: rotate(-45deg);
 }
 
-.slide-back::after {
+.galeria-back::after {
   bottom: 8px;
   left: 5px;
 
@@ -145,7 +140,7 @@
   transform: rotate(45deg);
 }
 
-.slide-next::before {
+.galeria-next::before {
   right: 5px;
   top: 8px;
 
@@ -156,7 +151,7 @@
   transform: rotate(45deg);
 }
 
-.slide-next::after {
+.galeria-next::after {
   bottom: 8px;
   right: 5px;
 
@@ -167,37 +162,37 @@
   transform: rotate(-45deg);
 }
 
-#slide-1:checked ~ .slider-inner .slides {
+#galeria-1:checked ~ .galerias-inner .imagenes {
   margin-left: 0;
 }
 
-#slide-2:checked ~ .slider-inner .slides {
+#galeria-2:checked ~ .galerias-inner .imagenes {
   margin-left: -100%;
 }
 
-#slide-3:checked ~ .slider-inner .slides {
+#galeria-3:checked ~ .galerias-inner .imagenes {
   margin-left: -200%;
 }
 
-#slide-4:checked ~ .slider-inner .slides {
+#galeria-4:checked ~ .galerias-inner .imagenes {
   margin-left: -300%;
 }
 
-#slide-1:checked ~ .slider-control-label[for="slide-1"],
-#slide-2:checked ~ .slider-control-label[for="slide-2"],
-#slide-3:checked ~ .slider-control-label[for="slide-3"],
-#slide-4:checked ~ .slider-control-label[for="slide-4"] {
+#galeria-1:checked ~ .galerias-control-label[for="galeria-1"],
+#galeria-2:checked ~ .galerias-control-label[for="galeria-2"],
+#galeria-3:checked ~ .galerias-control-label[for="galeria-3"],
+#galeria-4:checked ~ .galerias-control-label[for="galeria-4"] {
   background-color: #000;
 }
 
-#slide-1:checked ~ .slide-back[for="slide-4"],
-#slide-1:checked ~ .slide-next[for="slide-2"],
-#slide-2:checked ~ .slide-back[for="slide-1"],
-#slide-2:checked ~ .slide-next[for="slide-3"],
-#slide-3:checked ~ .slide-back[for="slide-2"],
-#slide-3:checked ~ .slide-next[for="slide-4"],
-#slide-4:checked ~ .slide-back[for="slide-3"],
-#slide-4:checked ~ .slide-next[for="slide-1"] {
+#galeria-1:checked ~ .galeria-back[for="galeria-4"],
+#galeria-1:checked ~ .galeria-next[for="galeria-2"],
+#galeria-2:checked ~ .galeria-back[for="galeria-1"],
+#galeria-2:checked ~ .galeria-next[for="galeria-3"],
+#galeria-3:checked ~ .galeria-back[for="galeria-2"],
+#galeria-3:checked ~ .galeria-next[for="galeria-4"],
+#galeria-4:checked ~ .galeria-back[for="galeria-3"],
+#galeria-4:checked ~ .galeria-next[for="galeria-1"] {
   display: block;
 }
 img{
@@ -205,7 +200,34 @@ img{
   height: auto;
 }
 @media (max-width: 600px) {
-  .slider  {
-    max-width: 300px;
+  .galerias  {
+    width: auto;
+    margin: 0 1em 0 1em;
+    right: 0px;
   }
+
+  img{
+    width: 100%;
+  }
+  .galerias-inner{
+    width: 100%;
+  }
+  .galeria-back {
+  left: -24px;
+}
+  .galeria-next {
+  right: -24px;
+}
+}
+
+/* texto intro*/
+.txt-intro{
+  background: rgba(51,67,70,0.3);
+  padding: 1px 0;
+  text-align: center;
+  text-transform: uppercase;
+  float: none;
+  color: white;
+  line-height: 65px;
+  font-size: 50px;
 }
