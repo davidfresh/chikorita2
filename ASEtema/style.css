@@ -245,6 +245,7 @@ img{
 
 /*fondo del navigation bar en prymary dark*/
 .navbar {
+  background: rgba(0, 0, 0, 0.1);
   background: #0097A7; 
 }
 
@@ -275,4 +276,17 @@ body {
 /*color del texto en navigation bar*/
 .navbar-inverse .navbar-nav>li>a {
   color: white;
+}
+
+.about-us {
+  background: #00BCD4;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.about-us p {
+  color: white;
+}
+
+.testimonial {
+  background: #00BCD4;
 }
