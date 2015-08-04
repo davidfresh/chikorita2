@@ -1,0 +1,211 @@
+/*
+ Theme Name:   Tema ASE
+ Theme URI:    http://ase.una.mx
+ Description:  Twenty Fourteen Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     zerif-lite
+ Version:      0.1
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fourteen-chil
+*/
+@import url("../zerif-lite/style.css");
+
+/* =Aquí empieza la personalización de tu tema
+-------------------------------------------------------------- */
+.testimonial{
+	background: olive;
+}
+
+
+
+
+
+
+.slider {
+  height: 50%;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.slider-inner {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.slides {
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  width: 400%;
+
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.slide {
+  width: 25%;
+}
+
+.slider-control {
+  display: none;
+}
+
+.slider-control-label {
+  background-color: #CCC;
+  border: 2px solid #000;
+  border-radius: 100%;
+  cursor: pointer;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+}
+
+.slider-control-label:hover,
+.slider-control-label:focus {
+  background-color: #FFF;
+}
+
+.slide-back,
+.slide-next {
+  background-color: #CCC;
+  border-radius: 100%;
+  border: 2px solid #000;
+  color: #CCC;
+  cursor: pointer;
+  display: none;
+  font-weight: bold;
+  height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  vertical-align: middle;
+  width: 26px;
+}
+
+.slide-back:hover,
+.slide-back:focus,
+.slide-next:hover,
+.slide-next:focus {
+  background-color: #FFF;
+}
+
+.slide-back {
+  left: -50px;
+}
+
+.slide-next {
+  right: -50px;
+}
+
+.slider-arrow::before,
+.slider-arrow::after {
+  border: 2px solid black;
+  border-radius: 9px;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 9px;
+}
+
+.slide-back::before {
+  left: 5px;
+  top: 8px;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.slide-back::after {
+  bottom: 8px;
+  left: 5px;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.slide-next::before {
+  right: 5px;
+  top: 8px;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.slide-next::after {
+  bottom: 8px;
+  right: 5px;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#slide-1:checked ~ .slider-inner .slides {
+  margin-left: 0;
+}
+
+#slide-2:checked ~ .slider-inner .slides {
+  margin-left: -100%;
+}
+
+#slide-3:checked ~ .slider-inner .slides {
+  margin-left: -200%;
+}
+
+#slide-4:checked ~ .slider-inner .slides {
+  margin-left: -300%;
+}
+
+#slide-1:checked ~ .slider-control-label[for="slide-1"],
+#slide-2:checked ~ .slider-control-label[for="slide-2"],
+#slide-3:checked ~ .slider-control-label[for="slide-3"],
+#slide-4:checked ~ .slider-control-label[for="slide-4"] {
+  background-color: #000;
+}
+
+#slide-1:checked ~ .slide-back[for="slide-4"],
+#slide-1:checked ~ .slide-next[for="slide-2"],
+#slide-2:checked ~ .slide-back[for="slide-1"],
+#slide-2:checked ~ .slide-next[for="slide-3"],
+#slide-3:checked ~ .slide-back[for="slide-2"],
+#slide-3:checked ~ .slide-next[for="slide-4"],
+#slide-4:checked ~ .slide-back[for="slide-3"],
+#slide-4:checked ~ .slide-next[for="slide-1"] {
+  display: block;
+}
+img{
+  width: auto;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .slider  {
+    max-width: 300px;
+  }
+}
