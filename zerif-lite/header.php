@@ -108,7 +108,7 @@ endif; ?>
 
 						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
 
-							echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
+							echo '<img class="logo" src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
 
 						echo '</a>';
 
