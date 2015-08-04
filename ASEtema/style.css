@@ -231,3 +231,48 @@ img{
   line-height: 65px;
   font-size: 50px;
 }
+
+/*navigation bar*/
+.navbar-brand {
+  
+  padding: 0px 0px;
+  height: 100px;
+  
+}
+.navbar-brand > img {
+  max-height: none;
+}
+
+/*fondo del navigation bar en prymary dark*/
+.navbar {
+  background: #0097A7; 
+}
+
+
+/*color de fondo de la transparencia y padding de los elementos de la primera seccion*/
+.header-content-wrap {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 120px 0 210px;
+  }
+/*color del fondo con prymary color*/
+body {
+  background: #00BCD4;
+}
+
+/*dimensiones del logo*/
+.logo {
+  width: 150px;
+  height: 150px;
+  margin-top: -25px;
+  
+}
+
+/*background del titulo*/
+.txt-intro {
+  background: rgba(0,0,4,.1);
+}
+
+/*color del texto en navigation bar*/
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
