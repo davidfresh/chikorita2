@@ -1648,3 +1648,8 @@ function remove_class_function( $classes ) {
     return $classes;
 
 }
+
+
+add_theme_support('post-thumbanails');
+
+add_image_size( 'my-feed',118,62,true);
